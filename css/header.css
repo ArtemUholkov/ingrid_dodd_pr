@@ -12,11 +12,10 @@ header {
   align-items: center;
   position: absolute;
   top: -100vh;
-
   background-image: url(../img/header/DJI_0626x-copy-1-overlay-modified.png);
   background-color: rgba(0, 0, 0, 0.7);
-  background-size: 140%;
-  background-position: 50% 50%;
+  background-size: cover;
+  background-position: 48% 50%;
   background-repeat: no-repeat;
   z-index: 3;
   transition: ease 1s;
@@ -38,6 +37,12 @@ header {
 .fixed_content {
   z-index: 10;
   position: relative;
+  top: 0;
+  line-height: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 50px;
 }
 .filter {
   height: 100vh;
@@ -59,4 +64,53 @@ header {
   height: 100%;
   /* ...and bring it back again */
   margin-left: -100%;
+}
+.stick {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  transition: 0.2s;
+  border-radius: 3px;
+  margin-top: 6px;
+  transition: ease-in-out 0.7s;
+  border: 0.5px solid black;
+}
+.burger_space.active .stick:nth-child(2) {
+  opacity: 0;
+  transition: ease-in-out 0.7s;
+}
+
+.burger_space.active .stick:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+  transition: ease-in-out 0.7s;
+}
+
+.burger_space.active .stick:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+  transition: ease-in-out 0.7s;
+}
+
+.burger_space {
+  cursor: pointer;
+  padding: 10px;
+}
+.logo_wrapper {
+  max-width: 288px;
+  max-height: 72px;
+  margin-top: 18px;
+}
+.logo_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.header_socials {
+  display: flex;
+}
+.my_icons {
+  color: white;
+  font-size: 26px;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  padding: 10px;
 }

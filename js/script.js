@@ -72,4 +72,5 @@ console.log(burger, menu);
 burger.addEventListener('click', changeMenu);
 function changeMenu() {
   menu.classList.toggle('show');
+  burger.classList.toggle('active');
 }

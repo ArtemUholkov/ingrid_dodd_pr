@@ -72,5 +72,50 @@ console.log(burger, menu);
 burger.addEventListener('click', changeMenu);
 function changeMenu() {
   menu.classList.toggle('show');
+  menu.classList.toggle('move');
   burger.classList.toggle('active');
 }
+// const el = document.querySelector('.menu_content_wrapper');
+
+// el.addEventListener('mousemove', (e) => {
+//   el.style.setProperty('--x', -e.offsetX + 'px');
+//   el.style.setProperty('--y', -e.offsetY + 'px');
+// });
+// const bg = document.querySelector('.menu_content_wrapper');
+// const walk = 40;
+
+// const move = (e) => {
+//   let mouseX = -Math.round((e.clientX / window.innerWidth) * walk - walk / 2);
+//   let mouseY = -Math.round((e.clientY / window.innerHeight) * walk - walk / 2);
+//   bg.style.transform = `scale(1.1) translate(${mouseX}px, ${mouseY}px)`;
+// };
+// window.addEventListener('mousemove', move);
+
+// //LIST animation
+// var tl = new TimelineLite();
+// tl.staggerFrom(
+//   'li',
+//   2,
+//   {
+//     delay: 0.1,
+//     y: 10,
+//     opacity: 0,
+//     ease: Back.easeOut,
+//   },
+//   0.2,
+// );
+// function move(e) {
+//   var image = document.getElementById('image'),
+//     w = window.innerWidth,
+//     h = window.innerHeight,
+//     mouseX = e.clientX,
+//     mouseY = e.clientY,
+//     imageX = (mouseX / w) * 100,
+//     imageY = (mouseY / h) * 100;
+//   console.log(mouseX, mouseY);
+
+//   image.style['background-position'] = imageX + '% ' + imageY + '%';
+// }
+
+// window.addEventListener('resize', move);
+// window.addEventListener('mousemove', move);

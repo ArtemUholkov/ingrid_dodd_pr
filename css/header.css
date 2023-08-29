@@ -1,11 +1,15 @@
 header {
   position: relative;
 }
+.wrap_of_wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .menu_content_wrapper {
   width: 100vw;
   height: 100vh;
-}
-.menu_content_wrapper {
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -14,8 +18,8 @@ header {
   top: -100vh;
   background-image: url(../img/header/DJI_0626x-copy-1-overlay-modified.png);
   background-color: rgba(0, 0, 0, 0.7);
-  background-size: cover;
-  background-position: 48% 50%;
+  background-size: 110% cover;
+  background-position: 48% 42%;
   background-repeat: no-repeat;
   z-index: 3;
   transition: ease 1s;
